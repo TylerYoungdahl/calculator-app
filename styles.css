@@ -1,0 +1,49 @@
+.calculator {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+#display {
+  text-align: right;
+}
+
+.buttons {
+  display: flex;
+}
+
+.buttons-num {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 0;
+  background-color: aqua;
+}
+
+.buttons-num button {
+  width: 33.3333%;
+}
+
+.buttons-ops {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+
+.buttons button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(198, 198, 198);
+  border: none;
+  padding: 20px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  background-color: rgb(187, 187, 187);
+}
+
+.buttons button:active {
+  background-color: rgb(152, 152, 152);
+}
