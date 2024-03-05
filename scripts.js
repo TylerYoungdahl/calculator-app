@@ -38,6 +38,8 @@ clearBtn.addEventListener("click", () => {
 
 equalsBtn.addEventListener("click", () => {
   calculate();
+  previousScreen.textContent = "";
+  currentScreen.textContent = previousValue;
 });
 
 function handleNumber(num) {
@@ -66,5 +68,11 @@ function calculate() {
     previousValue /= currentValue;
   }
 
-  console.log(previousValue);
+  previousValue = roundNumber(previousValue);
+  previousValue = previousValue.toString();
+  currentValue = previousValue.toString();
+}
+
+function roundNumber(num) {
+  return Math.round(num * 1000) / 1000;
 }
